@@ -10,11 +10,11 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 A template repo for Python packages featuring:
-- main/dev branch workflow
-- unittests
-- publishing on pypi
-- building docu
-- generating code coverage reports
+- `main`/`dev` branch workflow
+- unittests and code coverage
+- publishing the package on PyPi
+- building documentation and publishing via GitHub pages
+
 
 ## How To
 
