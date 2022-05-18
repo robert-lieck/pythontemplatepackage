@@ -71,17 +71,20 @@ GitHub actions are defined in the `*.yml` files in the `.github/workflows` direc
 
 #### Tests
 
-Adapt the `test_main.yml` and `test_dev.yml` by replacing the following:
-- `python-version: [...]`: Python versions to run the tests for (e.g. `["3.6", "3.7", "3.8", "3.9"]`)
-- `PythonPackageTemplate`: the name of your package chosen above
-- `bash <(curl -s https://codecov.io/bash -t <codecov_token>)`: your [codecov.io](https://about.codecov.io/) token (comment out if you do not want to use codecov.io)
+Replace the `test_template.py` file with some real tests for you package (at least, you have to replace `PythonPackageTemplate` with your package name for things to work).
 
-Of course, you would want to replace the `test_template.py` file with some real tests for you package (at least, you have to replace `PythonPackageTemplate` with your package name).
+In `tests.yml` (for `main` branch) and `test_dev.yml` (for `dev` branch) adapt the following:
+- `os: [ubuntu-latest, macos-latest, windows-latest]`: operating systems to test for
+- `python-version: ["3.9", "3.10"]`: Python versions to test for
+- `PythonPackageTemplate`: the name of your package chosen above
+- `Upload coverage to Codecov`: you can delete this section if you do not want to use [codecov.io](https://about.codecov.io/) (remember to also remove the codecov badge above)
+  - If you use codecov, you will have to enable the project in your account.
+  - After the first report has been uploaded, you can get the correct coverage badge from there (incl. the token).
 
 The GitHub actions for running tests on the `main` and `dev` branch are almost identical. The only differences are:
 - their name (used to display in the web interface)
 - the branch name (adapt if you use different names)
-- the line for publishing the code coverage results (only for `main`) TODO
+- test on `main` also upload code coverage reports
 
 The tests run on `push` and `pull_request` events of the respective branch or when triggered manually.
 
