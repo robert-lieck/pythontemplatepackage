@@ -2,7 +2,7 @@
 
 from unittest import TestCase
 
-from PythonPackageTemplate.myclass import MyClass
+from PythonTemplatePackage.myclass import MyClass
 
 
 class TestTemplate(TestCase):
