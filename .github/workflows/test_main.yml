@@ -8,7 +8,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+  workflow_dispatch:
 
 jobs:
   build:
@@ -37,13 +37,13 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python -m pytest --cov=PythonPackageTemplate --cov-report=xml --cov-report=html --junitxml=junit/test-results.xml
-#        pytest --cov=./ --cov-report=xml
+#        python -m pytest --cov=PythonPackageTemplate --cov-report=xml --cov-report=html --junitxml=junit/test-results.xml
+        pytest --cov=./ --cov-report=xml
       #        bash <(curl -s https://codecov.io/bash -t <codecov_token>)
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
       with:
-        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+#        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
         directory: ./coverage/reports/
         env_vars: OS,PYTHON
         fail_ci_if_error: true # optional (default = false)
