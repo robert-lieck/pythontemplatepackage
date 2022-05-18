@@ -22,14 +22,18 @@ To create a new Python package from this template, start by cloning this repo (o
 
 ### Badges README
 
-The `README.md` is obviously specific to your project, but you might want to reuse the badges at the top... TODO
+The `README.md` is obviously specific to your project, but you might want to use the badges at the top.
+- The `tests`, `build`, and `docs` badge show the success status of the respective GitHub actions. The easiest is the follow the procedure below and update them afterwards.
+- The `codecov` badge should be replaced by the one specific to your package (see [Tests](#Tests) below).
+- In the `pypi` badge the package name needs to be adapted. After the first successful upload (see [PyPi](#PyPi) below) it will show the correct version and link to the PyPi page.
+- In the `docs` badge, you may want to link to the actual documentation (as is done above) instead of the GitHub action (as is the default).
 
 ### Package Name
 
-The example package provided by this repo is named `PythonTemplatePackage` and this name appears in many locations. Therefore, the first step is to replace all occurrences by the name of your package. In particular, you have to rename the folder `PythonTemplatePackage` accordingly and replace all occurrences in the following files (this is described in more detail in the respective sections below):
+The example package provided by this repo is named `PythonTemplatePackage` and this name appears in many locations. Therefore, the first step is to choose a package name (check that it is available on PyPi if you plan to publish it there!) and replace all occurrences by the name of your package. In particular, you have to rename the folder `PythonTemplatePackage` accordingly and replace all occurrences in the following files (this is described in more detail in the respective sections below):
 - `setup.py`
 - `tests/test_template.py`
-- `.github/workflows/tests_main.yml`
+- `.github/workflows/tests.yml`
 - `.github/workflows/test_dev.yml`
 - `docs/conf.py`
 - `docs/index.rst`
@@ -37,10 +41,13 @@ The example package provided by this repo is named `PythonTemplatePackage` and t
 
 ### Folder Structure
 
-* Your source code goes into the `PythonTemplatePackage` directory (after renaming it to your package name).
-* Your unittests go into the `test` directory.
-* Your documentation goes into the `docs` directory.
-* The `.github` folder contains workflows for GitHub actions.
+- Your source code goes into the `PythonTemplatePackage` directory (after renaming it to your package name).
+- Your unittests go into the `test` directory.
+- Your documentation goes into the `docs` directory.
+- The `.github/workflows` folder contains `*.yml` files that define GitHub actions that
+  - run tests on the `main` and `dev` branch (see [Tests](#Tests))
+  - publish the package on [pypi.org](https://pypi.org/) (see [PyPi](#PyPi))
+  - build the documentation and publish it via GitHub pages (see [Documentation](#Documentation))
 
 ### Adapt `requirements.txt` and `setup.py`
 
@@ -62,14 +69,7 @@ Moreover, in the `classifiers` argument, you may want to adapt the following to 
 
 If you change the license information, you probably also want to adapt the `LICENSE` file and the badge at the top of the `README.md`.
 
-### GitHub Actions
-
-GitHub actions are defined in the `*.yml` files in the `.github/workflows` directory. There are predefined actions to
-- run tests on the `main` and `dev` branch
-- publish the package on [pypi.org](https://pypi.org/)
-- build the documentation
-
-#### Tests
+### Tests
 
 Replace the `test_template.py` file with some real tests for you package (at least, you have to replace `PythonTemplatePackage` with your package name for things to work).
 
@@ -84,27 +84,19 @@ In `tests.yml` (for `main` branch) and `test_dev.yml` (for `dev` branch) adapt t
 The GitHub actions for running tests on the `main` and `dev` branch are almost identical. The only differences are:
 - their name (used to display in the web interface)
 - the branch name (adapt if you use different names)
-- test on `main` also upload code coverage reports
+- tests on `main` also upload code coverage reports
+- the test and codecov badge refer the tests on `main`
 
 The tests run on `push` and `pull_request` events of the respective branch or when triggered manually.
 
-#### PyPi
+### PyPi
 
-In you [PyPi account page](https://pypi.org/manage/account/)
+You have to set up an API token to be able to upload to PyPi:
+- In you [PyPi account page](https://pypi.org/manage/account/) create a new API token valid for all projects (will be changed later).
+- In the repository's GitHub page under `Settings > Secrets > Actions` create a new _Repository Secret_ with name `PYPI_PASSWORD` and copy-paste the PyPi token (`pypi-...`).
+- _After_ the  first successful upload, _change_ that token by one that is specific to this package (for security reasons).
 
-Settings > Secrets > Actions > Repository Secrets
-
-
-
-You do not need to adapt the `publish.yml` file, the action is triggered when a new `release` is created (or manually). However, the two lines
-- `TWINE_USERNAME: __token__`
-- `TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}`
-
-require you to setup... TODO
-
-#### Documentation
-
-- enagle GitHub pages on `gh-pages` branch using the `/` (root) directory.
+### Documentation
 
 The `docs` folder contains a skeleton documentation using the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/stable/) that you can adapt to your needs. You should replace the following:
 - in `conf.py`, `index.rst`, `api_summary.rst`
@@ -114,6 +106,7 @@ The `docs` folder contains a skeleton documentation using the [Read the Docs Sph
   - `copyright = '...'`
   - `author = '...'`
 
+#### Local Builds
 
 For local builds, you can run `make` commands in the `docs` directory (you will have to install in packages specified in `docs/requirements.txt`), in particular
 - `make html`: builds the documentation
@@ -122,5 +115,13 @@ For local builds, you can run `make` commands in the `docs` directory (you will 
 - `make help`: get information about available make commands.
 
 To automatically generate a detailed API, the Sphinx extension `autosummary` is used, which may cause some trouble:
-- You may get `WARNING: duplicate object description ...` warnings.
+- You may get `WARNING: duplicate object description ...`.
 - The generated files are stored inside `_autosummary`, which is not cleaned up by `make clean`, so you have to manually remove those files.
+
+#### Publish via GitHub Pages
+
+To publish the documentation via GitHub pages, you have to:
+- create the `gh-pages` branch
+- enable GitHub pages on `gh-pages` branch using the `/` (root) directory.
+
+The `docs` action build the documentation via `make html` and pushes it to the `gh-pages` branch. It does _not_ run `make doctest`, you have to do this locally to check.
