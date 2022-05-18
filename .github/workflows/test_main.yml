@@ -38,4 +38,17 @@ jobs:
     - name: Test with pytest
       run: |
         python -m pytest --cov=PythonPackageTemplate --cov-report=xml --cov-report=html --junitxml=junit/test-results.xml
-#        bash <(curl -s https://codecov.io/bash -t <codecov_token>)
+#        pytest --cov=./ --cov-report=xml
+      #        bash <(curl -s https://codecov.io/bash -t <codecov_token>)
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+        directory: ./coverage/reports/
+        env_vars: OS,PYTHON
+        fail_ci_if_error: true # optional (default = false)
+        files: ./coverage1.xml,./coverage2.xml # optional
+        flags: unittests # optional
+        name: codecov-umbrella # optional
+        path_to_write_report: ./coverage/codecov_report.txt
+        verbose: true # optional (default = false)
