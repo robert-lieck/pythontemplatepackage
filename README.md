@@ -1,15 +1,13 @@
 # PythonPackageTemplate
 
-[![Documentation](https://github.com/robert-lieck/PythonPackageTemplate/actions/workflows/docs.yml/badge.svg)](https://robert-lieck.github.io/PythonPackageTemplate/)
+[![tests](https://github.com/robert-lieck/PythonPackageTemplate/actions/workflows/tests.yml/badge.svg)](https://github.com/robert-lieck/PythonPackageTemplate/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/robert-lieck/PythonPackageTemplate/branch/main/graph/badge.svg?token=XAUCWNS7II)](https://codecov.io/gh/robert-lieck/PythonPackageTemplate)
 
 ![build](https://github.com/robert-lieck/PythonPackageTemplate/workflows/build/badge.svg)
 [![PyPI version](https://badge.fury.io/py/PythonPackageTemplate.svg)](https://badge.fury.io/py/PythonPackageTemplate)
 
-[![test_main](https://github.com/robert-lieck/PythonPackageTemplate/actions/workflows/test_main.yml/badge.svg)](https://github.com/robert-lieck/PythonPackageTemplate/actions/workflows/test_main.yml)
-[![codecov](https://codecov.io/gh/robert-lieck/PythonPackageTemplate/branch/main/graph/badge.svg?token=XAUCWNS7II)](https://codecov.io/gh/robert-lieck/PythonPackageTemplate)
-
+[![docs](https://github.com/robert-lieck/PythonPackageTemplate/actions/workflows/docs.yml/badge.svg)](https://robert-lieck.github.io/PythonPackageTemplate/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
 
 A template repo for Python packages featuring:
 - main/dev branch workflow
