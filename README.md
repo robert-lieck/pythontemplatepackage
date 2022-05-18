@@ -83,10 +83,9 @@ Of course, you would want to replace the `test_template.py` file with some real 
 The GitHub actions for running tests on the `main` and `dev` branch are almost identical. The only differences are:
 - their name (used to display in the web interface)
 - the branch name (adapt if you use different names)
-- the `workflow_dispatch` statement (only for `dev`) that allows to manually trigger execution
-- the line for publishing the code coverage results (only for `main`)
+- the line for publishing the code coverage results (only for `main`) TODO
 
-The tests run on `push` and `pull_request` events of the respective branch, for `dev` they can additionally be triggered manually.
+The tests run on `push` and `pull_request` events of the respective branch or when triggered manually.
 
 #### PyPi
 
