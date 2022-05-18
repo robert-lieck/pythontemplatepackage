@@ -1,6 +1,6 @@
 # PythonPackageTemplate
 
-[![docs (development version)](https://img.shields.io/badge/docs-dev-blue.svg)](https://github.com/robert-lieck/PythonPackageTemplate/)
+[![Documentation](https://github.com/robert-lieck/PythonPackageTemplate/actions/workflows/docs.yml/badge.svg)](https://robert-lieck.github.io/PythonPackageTemplate/)
 
 ![build](https://github.com/robert-lieck/PythonPackageTemplate/workflows/build/badge.svg)
 [![PyPI version](https://badge.fury.io/py/PythonPackageTemplate.svg)](https://badge.fury.io/py/PythonPackageTemplate)
@@ -96,6 +96,8 @@ You do not need to adapt the `publish.yml` file, the action is triggered when a 
 require you to setup... TODO
 
 #### Documentation
+
+- enagle GitHub pages on `gh-pages` branch using the `/` (root) directory.
 
 The `docs` folder contains a skeleton documentation using the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/stable/) that you can adapt to your needs. You should replace the following:
 - in `conf.py`, `index.rst`, `api_summary.rst`
