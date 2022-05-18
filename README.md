@@ -74,7 +74,7 @@ GitHub actions are defined in the `*.yml` files in the `.github/workflows` direc
 #### Tests
 
 Adapt the `test_main.yml` and `test_dev.yml` by replacing the following:
-- `python-version: [...]`: Python versions to run the tests for (e.g. `[3.6, 3.7, 3.8, 3.9]`)
+- `python-version: [...]`: Python versions to run the tests for (e.g. `["3.6", "3.7", "3.8", "3.9"]`)
 - `PythonPackageTemplate`: the name of your package chosen above
 - `bash <(curl -s https://codecov.io/bash -t <codecov_token>)`: your [codecov.io](https://about.codecov.io/) token (comment out if you do not want to use codecov.io)
 
