@@ -5,7 +5,7 @@
 ![build](https://github.com/robert-lieck/PythonPackageTemplate/workflows/build/badge.svg)
 [![PyPI version](https://badge.fury.io/py/PythonPackageTemplate.svg)](https://badge.fury.io/py/PythonPackageTemplate)
 
-![tests](https://github.com/robert-lieck/PythonPackageTemplate/workflows/tests/badge.svg)
+[![test_main](https://github.com/robert-lieck/PythonPackageTemplate/actions/workflows/test_main.yml/badge.svg)](https://github.com/robert-lieck/PythonPackageTemplate/actions/workflows/test_main.yml)
 [![codecov](https://codecov.io/gh/robert-lieck/PythonPackageTemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/robert-lieck/PythonPackageTemplate)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
