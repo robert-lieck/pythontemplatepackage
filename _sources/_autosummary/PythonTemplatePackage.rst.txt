@@ -1,7 +1,7 @@
-﻿PythonPackageTemplate
+﻿PythonTemplatePackage
 =====================
 
-.. automodule:: PythonPackageTemplate
+.. automodule:: PythonTemplatePackage
 
    
    
@@ -28,5 +28,5 @@
    :template: custom-module-template.rst
    :recursive:
 
-   PythonPackageTemplate.myclass
+   PythonTemplatePackage.myclass
 

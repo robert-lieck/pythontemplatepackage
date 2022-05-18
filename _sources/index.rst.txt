@@ -1,6 +1,6 @@
 .. documentation master file; adapt to your liking (but should at least contain the root `toctree` directive).
 
-Welcome to PythonPackageTemplate's documentation!
+Welcome to PythonTemplatePackage's documentation!
 =================================================
 
 .. toctree::
@@ -17,7 +17,7 @@ Code examples are automatically tested
    Hello World
 
 
-.. autoclass:: PythonPackageTemplate.myclass.MyClass
+.. autoclass:: PythonTemplatePackage.myclass.MyClass
    :members:
 
 

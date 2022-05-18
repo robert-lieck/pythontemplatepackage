@@ -1,7 +1,7 @@
-PythonPackageTemplate.myclass
+PythonTemplatePackage.myclass
 =============================
 
-.. automodule:: PythonPackageTemplate.myclass
+.. automodule:: PythonTemplatePackage.myclass
 
    
    
