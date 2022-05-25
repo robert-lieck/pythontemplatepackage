@@ -1,7 +1,7 @@
-PythonTemplatePackage.myclass.MyClass
+pythontemplatepackage.myclass.MyClass
 =====================================
 
-.. currentmodule:: PythonTemplatePackage.myclass
+.. currentmodule:: pythontemplatepackage.myclass
 
 .. autoclass:: MyClass
    :members:
