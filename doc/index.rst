@@ -17,7 +17,7 @@ Code examples are automatically tested
    Hello World
 
 
-.. autoclass:: PythonTemplatePackage.myclass.MyClass
+.. autoclass:: pythontemplatepackage.myclass.MyClass
    :members:
 
 

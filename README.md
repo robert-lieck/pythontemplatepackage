@@ -1,12 +1,12 @@
 # PythonTemplatePackage
 
-[![tests](https://github.com/robert-lieck/PythonTemplatePackage/actions/workflows/tests.yml/badge.svg)](https://github.com/robert-lieck/PythonTemplatePackage/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/robert-lieck/PythonTemplatePackage/branch/main/graph/badge.svg?token=XAUCWNS7II)](https://codecov.io/gh/robert-lieck/PythonTemplatePackage)
+[![tests](https://github.com/robert-lieck/pythontemplatepackage/actions/workflows/tests.yml/badge.svg)](https://github.com/robert-lieck/pythontemplatepackage/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/robert-lieck/pythontemplatepackage/branch/main/graph/badge.svg?token=XAUCWNS7II)](https://codecov.io/gh/robert-lieck/pythontemplatepackage)
 
-![build](https://github.com/robert-lieck/PythonTemplatePackage/workflows/build/badge.svg)
-[![PyPI version](https://badge.fury.io/py/PythonTemplatePackage.svg)](https://badge.fury.io/py/PythonTemplatePackage)
+![build](https://github.com/robert-lieck/pythontemplatepackage/workflows/build/badge.svg)
+[![PyPI version](https://badge.fury.io/py/pythontemplatepackage.svg)](https://badge.fury.io/py/pythontemplatepackage)
 
-[![docs](https://github.com/robert-lieck/PythonTemplatePackage/actions/workflows/docs.yml/badge.svg)](https://robert-lieck.github.io/PythonTemplatePackage/)
+[![docs](https://github.com/robert-lieck/pythontemplatepackage/actions/workflows/docs.yml/badge.svg)](https://robert-lieck.github.io/pythontemplatepackage/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 A template repo for Python packages featuring:
@@ -30,7 +30,7 @@ The `README.md` is obviously specific to your project, but you might want to use
 
 ### Package Name
 
-The example package provided by this repo is named `PythonTemplatePackage` and this name appears in many locations. Therefore, the first step is to choose a package name (check that it is available on PyPi if you plan to publish it there!) and replace all occurrences by the name of your package. In particular, you have to rename the folder `PythonTemplatePackage` accordingly and replace all occurrences in the following files (this is described in more detail in the respective sections below):
+The example package provided by this repo is named `pythontemplatepackage` and this name appears in many locations. Therefore, the first step is to choose a package name (check that it is available on PyPi if you plan to publish it there!) and replace all occurrences by the name of your package. In particular, you have to rename the folder `pythontemplatepackage` accordingly and replace all occurrences in the following files (this is described in more detail in the respective sections below):
 - `setup.py`
 - `tests/test_template.py`
 - `.github/workflows/tests.yml`
@@ -41,7 +41,7 @@ The example package provided by this repo is named `PythonTemplatePackage` and t
 
 ### Folder Structure
 
-- Your source code goes into the `PythonTemplatePackage` directory (after renaming it to your package name).
+- Your source code goes into the `pythontemplatepackage` directory (after renaming it to your package name).
 - Your unittests go into the `test` directory.
 - Your documentation goes into the `docs` directory.
 - The `.github/workflows` folder contains `*.yml` files that define GitHub actions that
@@ -54,7 +54,7 @@ The example package provided by this repo is named `PythonTemplatePackage` and t
 List all required Python packages in `requirements.txt`.
 
 In `setup.py` replace the following:
-- `name="PythonTemplatePackage"`: replace with the name of your package
+- `name="pythontemplatepackage"`: replace with the name of your package
 - `version="..."`: the version of your package
 - `author="..."`: your name
 - `author_email="..."`: your email
@@ -71,12 +71,12 @@ If you change the license information, you probably also want to adapt the `LICE
 
 ### Tests
 
-Replace the `test_template.py` file with some real tests for you package (at least, you have to replace `PythonTemplatePackage` with your package name for things to work).
+Replace the `test_template.py` file with some real tests for you package (at least, you have to replace `pythontemplatepackage` with your package name for things to work).
 
 In `tests.yml` (for `main` branch) and `test_dev.yml` (for `dev` branch) adapt the following:
 - `os: [ubuntu-latest, macos-latest, windows-latest]`: operating systems to test for
 - `python-version: ["3.9", "3.10"]`: Python versions to test for
-- `PythonTemplatePackage`: the name of your package chosen above
+- `pythontemplatepackage`: the name of your package chosen above
 - `Upload coverage to Codecov`: you can delete this section if you do not want to use [codecov.io](https://about.codecov.io/) (remember to also remove the codecov badge above)
   - If you use codecov, you will have to enable the project in your account.
   - After the first report has been uploaded, you can get the correct coverage badge from there (incl. the token).
@@ -100,9 +100,9 @@ You have to set up an API token to be able to upload to PyPi:
 
 The `docs` folder contains a skeleton documentation using the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/stable/) that you can adapt to your needs. You should replace the following:
 - in `conf.py`, `index.rst`, `api_summary.rst`
-  - replace `PythonTemplatePackage` with your package name
+  - replace `pythontemplatepackage` with your package name
 - in `conf.py` adapt the following:
-  - `project = 'PythonTemplatePackage'`
+  - `project = 'pythontemplatepackage'`
   - `copyright = '...'`
   - `author = '...'`
 
