@@ -8,7 +8,7 @@ with open("requirements.txt", "r") as fh:
 
 setuptools.setup(
     name="pythontemplatepackage",
-    version="0.0.1",
+    version="0.0.2",
     author="Robert Lieck",
     author_email="robert.lieck@durham.ac.uk",
     description="A template repo for Python packages with GitHub actions and documentation",
