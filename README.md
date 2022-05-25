@@ -23,7 +23,7 @@ To create a new Python package from this template, start by cloning this repo (o
 ### Badges README
 
 The `README.md` is obviously specific to your project, but you might want to use the badges at the top.
-- The `tests`, `build`, and `docs` badge show the success status of the respective GitHub actions. The easiest is the follow the procedure below and update them afterwards.
+- The `tests`, `build`, and `docs` badge show the success status of the respective GitHub actions. The easiest is to follow the procedure below and update them afterwards.
 - The `codecov` badge should be replaced by the one specific to your package (see [Tests](#Tests) below).
 - In the `pypi` badge the package name needs to be adapted. After the first successful upload (see [PyPi](#PyPi) below) it will show the correct version and link to the PyPi page.
 - In the `docs` badge, you may want to link to the actual documentation (as is done above) instead of the GitHub action (as is the default).
@@ -54,7 +54,7 @@ The example package provided by this repo is named `PythonTemplatePackage` and t
 List all required Python packages in `requirements.txt`.
 
 In `setup.py` replace the following:
-- `PythonTemplatePackage`: replace with the name of your package
+- `name="PythonTemplatePackage"`: replace with the name of your package
 - `version="..."`: the version of your package
 - `author="..."`: your name
 - `author_email="..."`: your email
@@ -93,7 +93,7 @@ The tests run on `push` and `pull_request` events of the respective branch or wh
 
 You have to set up an API token to be able to upload to PyPi:
 - In you [PyPi account page](https://pypi.org/manage/account/) create a new API token valid for all projects (will be changed later).
-- In the repository's GitHub page under `Settings > Secrets > Actions` create a new _Repository Secret_ with name `PYPI_PASSWORD` and copy-paste the PyPi token (`pypi-...`).
+- In the repository's GitHub page under `Settings > Secrets > Actions` create a new _Repository Secret_ with name `PYPI_API_TOKEN` and copy-paste the PyPi token (`pypi-...`).
 - _After_ the  first successful upload, _change_ that token by one that is specific to this package (for security reasons).
 
 ### Documentation
@@ -108,7 +108,7 @@ The `docs` folder contains a skeleton documentation using the [Read the Docs Sph
 
 #### Local Builds
 
-For local builds, you can run `make` commands in the `docs` directory (you will have to install in packages specified in `docs/requirements.txt`), in particular
+For local builds, you can run `make` commands in the `docs` directory (you will have to install the packages specified in `docs/requirements.txt`), in particular
 - `make html`: builds the documentation
 - `make doctest`: runs all code examples in the documentation and checks if the actual output matches the one shown in the documentation
 - `make clean`: remove all built files (except `_autosummary`, see below)
@@ -124,4 +124,4 @@ To publish the documentation via GitHub pages, you have to:
 - create the `gh-pages` branch
 - enable GitHub pages on `gh-pages` branch using the `/` (root) directory.
 
-The `docs` action build the documentation via `make html` and pushes it to the `gh-pages` branch. It does _not_ run `make doctest`, you have to do this locally to check.
+The `docs` action builds the documentation via `make html` and pushes it to the `gh-pages` branch. It does _not_ run `make doctest`, you have to do this locally to check.
