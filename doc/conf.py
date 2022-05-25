@@ -32,9 +32,12 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.autosummary',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.imgmath',
+    'sphinx_gallery.gen_gallery',
+    'sphinx.ext.intersphinx',
     'sphinx_autodoc_typehints',
     'autoclasstoc',
-    'sphinx.ext.viewcode',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -52,7 +55,12 @@ exclude_patterns = ['_build']
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
-html_show_sourcelink = False  # don't show the "View page source" link in the RTD theme
+# don't show the "View page source" link in the RTD theme
+html_show_sourcelink = False
+# use svg in imgmath extension
+imgmath_image_format='svg'
+# intersphinx mappings
+intersphinx_mapping = {}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
