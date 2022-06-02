@@ -19,6 +19,7 @@ Code examples are automatically tested
 
 .. autoclass:: pythontemplatepackage.myclass.MyClass
    :members:
+   :noindex:
 
 
 .. Indices and tables

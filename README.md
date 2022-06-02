@@ -111,12 +111,8 @@ The `docs` folder contains a skeleton documentation using the [Read the Docs Sph
 For local builds, you can run `make` commands in the `docs` directory (you will have to install the packages specified in `docs/requirements.txt`), in particular
 - `make html`: builds the documentation
 - `make doctest`: runs all code examples in the documentation and checks if the actual output matches the one shown in the documentation
-- `make clean`: remove all built files (except `_autosummary`, see below)
+- `make clean`: remove all built files (including `_autosummary` and `auto_examples`)
 - `make help`: get information about available make commands.
-
-To automatically generate a detailed API, the Sphinx extension `autosummary` is used, which may cause some trouble:
-- You may get `WARNING: duplicate object description ...`.
-- The generated files are stored inside `_autosummary`, which is not cleaned up by `make clean`, so you have to manually remove those files.
 
 #### Publish via GitHub Pages
 
