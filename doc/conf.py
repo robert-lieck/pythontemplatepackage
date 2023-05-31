@@ -61,6 +61,8 @@ html_show_sourcelink = False
 imgmath_image_format='svg'
 # intersphinx mappings
 intersphinx_mapping = {}
+# report broken links
+nitpicky = True
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
