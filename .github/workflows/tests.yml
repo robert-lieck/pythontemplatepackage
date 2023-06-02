@@ -39,7 +39,7 @@ jobs:
       run: |
         pytest --cov=pythontemplatepackage --cov-report=xml --cov-report=html --junitxml=junit/test-results.xml
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v3
       with:
         env_vars: OS,PYTHON
         fail_ci_if_error: true
