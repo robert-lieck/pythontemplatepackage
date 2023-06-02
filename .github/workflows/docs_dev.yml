@@ -24,10 +24,3 @@ jobs:
           cd doc/
           make html
           make linkcheck
-
-      - name: Deploy doc
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./doc/_build/html
-
