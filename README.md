@@ -6,7 +6,7 @@
 ![build](https://github.com/robert-lieck/pythontemplatepackage/workflows/build/badge.svg)
 [![PyPI version](https://badge.fury.io/py/pythontemplatepackage.svg)](https://badge.fury.io/py/pythontemplatepackage)
 
-[![docs](https://github.com/robert-lieck/pythontemplatepackage/actions/workflows/docs.yml/badge.svg)](https://robert-lieck.github.io/pythontemplatepackage/)
+[![doc](https://github.com/robert-lieck/pythontemplatepackage/actions/workflows/doc.yml/badge.svg)](https://robert-lieck.github.io/pythontemplatepackage/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 A template repo for Python packages featuring:
@@ -23,10 +23,10 @@ To create a new Python package from this template, start by cloning this repo (o
 ### Badges README
 
 The `README.md` is obviously specific to your project, but you might want to use the badges at the top.
-- The `tests`, `build`, and `docs` badge show the success status of the respective GitHub actions. The easiest is to follow the procedure below and update them afterwards.
+- The `tests`, `build`, and `doc` badge show the success status of the respective GitHub actions. The easiest is to follow the procedure below and update them afterwards.
 - The `codecov` badge should be replaced by the one specific to your package (see [Tests](#Tests) below).
 - In the `pypi` badge the package name needs to be adapted. After the first successful upload (see [PyPi](#PyPi) below) it will show the correct version and link to the PyPi page.
-- In the `docs` badge, you may want to link to the actual documentation (as is done above) instead of the GitHub action (as is the default).
+- In the `doc` badge, you may want to link to the actual documentation (as is done above) instead of the GitHub action (as is the default).
 
 ### Package Name
 
@@ -35,15 +35,15 @@ The example package provided by this repo is named `pythontemplatepackage` and t
 - `tests/test_template.py`
 - `.github/workflows/tests.yml`
 - `.github/workflows/test_dev.yml`
-- `docs/conf.py`
-- `docs/index.rst`
-- `docs/api_summary.rst`
+- `doc/conf.py`
+- `doc/index.rst`
+- `doc/api_summary.rst`
 
 ### Folder Structure
 
 - Your source code goes into the `pythontemplatepackage` directory (after renaming it to your package name).
 - Your unittests go into the `test` directory.
-- Your documentation goes into the `docs` directory.
+- Your documentation goes into the `doc` directory.
 - The `.github/workflows` folder contains `*.yml` files that define GitHub actions that
   - run tests on the `main` and `dev` branch (see [Tests](#Tests))
   - publish the package on [pypi.org](https://pypi.org/) (see [PyPi](#PyPi))
@@ -98,7 +98,7 @@ You have to set up an API token to be able to upload to PyPi:
 
 ### Documentation
 
-The `docs` folder contains a skeleton documentation using the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/stable/) that you can adapt to your needs. You should replace the following:
+The `doc` folder contains a skeleton documentation using the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/stable/) that you can adapt to your needs. You should replace the following:
 - in `conf.py`, `index.rst`, `api_summary.rst`
   - replace `pythontemplatepackage` with your package name
 - in `conf.py` adapt the following:
@@ -108,7 +108,7 @@ The `docs` folder contains a skeleton documentation using the [Read the Docs Sph
 
 #### Local Builds
 
-For local builds, you can run `make` commands in the `docs` directory (you will have to install the packages specified in `docs/requirements.txt`), in particular
+For local builds, you can run `make` commands in the `doc` directory (you will have to install the packages specified in `doc/requirements.txt`), in particular
 - `make html`: builds the documentation
 - `make doctest`: runs all code examples in the documentation and checks if the actual output matches the one shown in the documentation
 - `make clean`: remove all built files (including `_autosummary` and `auto_examples`)
@@ -120,4 +120,4 @@ To publish the documentation via GitHub pages, you have to:
 - create the `gh-pages` branch
 - enable GitHub pages on `gh-pages` branch using the `/` (root) directory.
 
-The `docs` action builds the documentation via `make html` and pushes it to the `gh-pages` branch. It does _not_ run `make doctest`, you have to do this locally to check.
+The `doc` action builds the documentation via `make html` and pushes it to the `gh-pages` branch. It also runs `make linkcheck` and `make doctest` to check for missing links and test examples in the documentation.

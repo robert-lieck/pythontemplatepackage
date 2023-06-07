@@ -23,6 +23,7 @@ jobs:
           cd doc/
           make html
           make linkcheck
+          make doctest
 
       - name: Deploy doc
         uses: peaceiris/actions-gh-pages@v3
