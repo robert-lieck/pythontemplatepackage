@@ -16,11 +16,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -76,7 +76,7 @@
            <div itemprop="articleBody">
              
   <section id="welcome-to-pythontemplatepackage-s-documentation">
-<h1>Welcome to PythonTemplatePackage’s documentation!<a class="headerlink" href="#welcome-to-pythontemplatepackage-s-documentation" title="Permalink to this heading"></a></h1>
+<h1>Welcome to PythonTemplatePackage’s documentation!<a class="headerlink" href="#welcome-to-pythontemplatepackage-s-documentation" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -93,12 +93,14 @@
 </li>
 </ul>
 </div>
-<p>You can include code as part of the documentation, which is automatically tested</p>
+<p>You can include code as part of the documentation</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
 <span class="go">Hello World</span>
 </pre></div>
 </div>
-<p>You can also include examples, which are shown in the <a class="reference internal" href="auto_examples/index.html"><span class="doc">PythonTemplatePackage Gallery</span></a>.</p>
+<p>which can be tested by running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">doctest</span></code>. This is also run by the GitHub action to build the documentation.</p>
+<p>You can also include executable example files with code and text, which are shown in the <a class="reference internal" href="auto_examples/index.html"><span class="doc">PythonTemplatePackage Gallery</span></a>.
+The <code class="docutils literal notranslate"><span class="pre">test_examples.py</span></code> unittest automatically runs these examples to check for errors.</p>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythontemplatepackage.myclass.</span></span><span class="sig-name descname"><span class="pre">MyClass</span></span><a class="reference internal" href="_modules/pythontemplatepackage/myclass.html#MyClass"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
