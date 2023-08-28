@@ -1,11 +1,10 @@
-name: doc_dev
+name: doc
 
 on:
   push:
     branches:
-      - dev
+      - main
     tags: '*'
-  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -24,3 +23,11 @@ jobs:
           cd doc/
           make html
           make linkcheck
+          make doctest
+
+      - name: Deploy doc
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./doc/_build/html
+
