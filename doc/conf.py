@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath('../'))
 # -- Project information -----------------------------------------------------
 
 project = 'pythontemplatepackage'
-copyright = '2022, Robert Lieck'
+copyright = '2022 Robert Lieck'
 author = 'Robert Lieck'
 
 
