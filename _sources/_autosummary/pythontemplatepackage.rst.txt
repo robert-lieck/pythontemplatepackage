@@ -29,4 +29,5 @@
    :recursive:
 
    pythontemplatepackage.myclass
+   pythontemplatepackage.rename
 
