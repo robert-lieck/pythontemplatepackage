@@ -36,6 +36,7 @@ def replace_in_file(file_path, find_str, replace_str, dry_run=True, print_conten
 def main(args):
     print(args)
     # change working directory and print message
+    cwd = os.getcwd()
     os.chdir(args.dir)
     print(f"{Fore.GREEN}Working directory: {os.getcwd()}{Style.RESET_ALL}")
 
@@ -86,6 +87,8 @@ def main(args):
                     os.rename(old, new)
         else:
             print(f"{Style.BRIGHT}{Fore.YELLOW}Skipping!{Style.RESET_ALL}")
+    # change back to original working directory
+    os.chdir(cwd)
 
 
 if __name__ == "__main__":
