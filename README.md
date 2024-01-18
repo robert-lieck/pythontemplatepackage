@@ -78,8 +78,10 @@ In `tests.yml` (for `main` branch) and `test_dev.yml` (for `dev` branch) adapt t
 - `python-version: ["3.9", "3.10"]`: Python versions to test for
 - `pythontemplatepackage`: the name of your package chosen above
 - `Upload coverage to Codecov`: you can delete this section if you do not want to use [codecov.io](https://about.codecov.io/) (remember to also remove the codecov badge above)
-  - If you use codecov, you will have to enable the project in your account.
-  - After the first report has been uploaded, you can get the correct coverage badge from there (incl. the token).
+  - If you use codecov, you will have to:
+    - enable the project in your account
+    - add the `CODECOV_TOKEN` to your repository's action secrets to be able to upload reports
+    - get the correct coverage badge after the first report has been uploaded under `Settings > Badges & Graphs` (the link includes a token).
 
 The GitHub actions for running tests on the `main` and `dev` branch are almost identical. The only differences are:
 - their name (used to display in the web interface)
