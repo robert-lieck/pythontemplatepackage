@@ -8,7 +8,7 @@ with open("requirements.txt", "r") as fh:
 
 setuptools.setup(
     name="newpackage",
-    version="0.0.5",
+    version="0.0.6",
     author="<New Author>",
     author_email="<new.author.email>",
     description="A template repo for Python packages with GitHub actions and documentation",
