@@ -50,7 +50,6 @@ class TestRename(TestCase):
                                                         'examples']]
                 if Path(dir) == Path(self.base) / 'doc':
                     return [s for s in sub if s not in ['api_summary.rst',
-                                                        'auto_examples',
                                                         'conf.py',
                                                         'index.rst',
                                                         'requirements.txt',

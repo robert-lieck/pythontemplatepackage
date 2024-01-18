@@ -46,7 +46,6 @@ def main(args):
     # replace strings in files
     for old, new, prompt, file_list in [
         ('PythonTemplatePackage', args.package_name, 'Package name in text', ['./doc/index.rst',
-                                                                              './doc/auto_examples/index.rst',
                                                                               './README.md',
                                                                               './examples/README.rst']),
         ('pythontemplatepackage', args.python_name, 'Python package name', ['./doc/conf.py',
