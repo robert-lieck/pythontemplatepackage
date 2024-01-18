@@ -1,6 +1,6 @@
 .. documentation master file; adapt to your liking (but should at least contain the root `toctree` directive).
 
-Welcome to <NewPackage>'s documentation!
+Welcome to NewPackage's documentation!
 =================================================
 
 .. toctree::
@@ -22,7 +22,7 @@ which can be tested by running ``make doctest``. This is also run by the GitHub 
 You can also include executable example files with code and text, which are shown in the :doc:`auto_examples/index`.
 The ``test_examples.py`` unittest automatically runs these examples to check for errors.
 
-.. autoclass:: <newpackage>.myclass.MyClass
+.. autoclass:: newpackage.myclass.MyClass
    :members:
    :noindex:
 

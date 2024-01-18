@@ -1,12 +1,12 @@
-# <NewPackage>
+# NewPackage
 
-[![tests](<newgithuburl>/<newpackage>/actions/workflows/tests.yml/badge.svg)](<newgithuburl>/<newpackage>/actions/workflows/tests.yml)
-[![codecov](<newcodecovurl>/<newpackage>/branch/main/graph/badge.svg?token=XAUCWNS7II)](<newcodecovurl>/<newpackage>)
+[![tests](<newgithuburl>/newpackage/actions/workflows/tests.yml/badge.svg)](<newgithuburl>/newpackage/actions/workflows/tests.yml)
+[![codecov](<newcodecovurl>/newpackage/branch/main/graph/badge.svg?token=XAUCWNS7II)](<newcodecovurl>/newpackage)
 
-![build](<newgithuburl>/<newpackage>/workflows/build/badge.svg)
-[![PyPI version](https://badge.fury.io/py/<newpackage>.svg)](https://badge.fury.io/py/<newpackage>)
+![build](<newgithuburl>/newpackage/workflows/build/badge.svg)
+[![PyPI version](https://badge.fury.io/py/newpackage.svg)](https://badge.fury.io/py/newpackage)
 
-[![doc](<newgithuburl>/<newpackage>/actions/workflows/doc.yml/badge.svg)](<newgithubdocurl>/<newpackage>/)
+[![doc](<newgithuburl>/newpackage/actions/workflows/doc.yml/badge.svg)](<newgithubdocurl>/newpackage/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 A template repo for Python packages featuring:
@@ -30,7 +30,7 @@ The `README.md` is obviously specific to your project, but you might want to use
 
 ### Package Name
 
-The example package provided by this repo is named `<newpackage>` and this name appears in many locations. Therefore, the first step is to choose a package name (check that it is available on PyPi if you plan to publish it there!) and replace all occurrences by the name of your package. In particular, you have to rename the folder `<newpackage>` accordingly and replace all occurrences in the following files (this is described in more detail in the respective sections below):
+The example package provided by this repo is named `newpackage` and this name appears in many locations. Therefore, the first step is to choose a package name (check that it is available on PyPi if you plan to publish it there!) and replace all occurrences by the name of your package. In particular, you have to rename the folder `newpackage` accordingly and replace all occurrences in the following files (this is described in more detail in the respective sections below):
 - `setup.py`
 - `tests/test_template.py`
 - `.github/workflows/tests.yml`
@@ -41,7 +41,7 @@ The example package provided by this repo is named `<newpackage>` and this name 
 
 ### Folder Structure
 
-- Your source code goes into the `<newpackage>` directory (after renaming it to your package name).
+- Your source code goes into the `newpackage` directory (after renaming it to your package name).
 - Your unittests go into the `test` directory.
 - Your documentation goes into the `doc` directory.
 - The `.github/workflows` folder contains `*.yml` files that define GitHub actions that
@@ -54,7 +54,7 @@ The example package provided by this repo is named `<newpackage>` and this name 
 List all required Python packages in `requirements.txt`.
 
 In `setup.py` replace the following:
-- `name="<newpackage>"`: replace with the name of your package
+- `name="newpackage"`: replace with the name of your package
 - `version="..."`: the version of your package
 - `author="..."`: your name
 - `author_email="..."`: your email
@@ -71,12 +71,12 @@ If you change the license information, you probably also want to adapt the `LICE
 
 ### Tests
 
-Replace the `test_template.py` file with some real tests for you package (at least, you have to replace `<newpackage>` with your package name for things to work).
+Replace the `test_template.py` file with some real tests for you package (at least, you have to replace `newpackage` with your package name for things to work).
 
 In `tests.yml` (for `main` branch) and `test_dev.yml` (for `dev` branch) adapt the following:
 - `os: [ubuntu-latest, macos-latest, windows-latest]`: operating systems to test for
 - `python-version: ["3.9", "3.10"]`: Python versions to test for
-- `<newpackage>`: the name of your package chosen above
+- `newpackage`: the name of your package chosen above
 - `Upload coverage to Codecov`: you can delete this section if you do not want to use [codecov.io](https://about.codecov.io/) (remember to also remove the codecov badge above)
   - If you use codecov, you will have to:
     - enable the project in your account
@@ -102,9 +102,9 @@ You have to set up an API token to be able to upload to PyPi:
 
 The `doc` folder contains a skeleton documentation using the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/stable/) that you can adapt to your needs. You should replace the following:
 - in `conf.py`, `index.rst`, `api_summary.rst`
-  - replace `<newpackage>` with your package name
+  - replace `newpackage` with your package name
 - in `conf.py` adapt the following:
-  - `project = '<newpackage>'`
+  - `project = 'newpackage'`
   - `copyright = '...'`
   - `author = '...'`
 

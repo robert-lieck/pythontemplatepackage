@@ -7,14 +7,14 @@ with open("requirements.txt", "r") as fh:
     install_requires = fh.read().splitlines()
 
 setuptools.setup(
-    name="<newpackage>",
+    name="newpackage",
     version="0.0.5",
     author="<New Author>",
     author_email="<new.author.email>",
     description="A template repo for Python packages with GitHub actions and documentation",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="<newgithuburl>/<newpackage>",
+    url="<newgithuburl>/newpackage",
     packages=setuptools.find_packages(exclude=['tests']),
     install_requires=install_requires,
     include_package_data=True,
