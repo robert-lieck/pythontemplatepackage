@@ -20,6 +20,18 @@ A template repo for Python packages featuring:
 
 To create a new Python package from this template, start by cloning this repo (or use it as a template when creating a new repo on GitHub) and then follow the procedure outlined below.
 
+***There now is the [`rename.py`](https://github.com/robert-lieck/pythontemplatepackage/blob/main/pythontemplatepackage/rename.py) script for initialising/renaming everything for a new package!***
+
+Go to the `pythontemplatepackage` folder and run
+
+```shell
+python rename.py -d /path/to/your/repo
+```
+
+to interactively make any required changes. You need to add the `-a` switch to actually apply any changes, otherwise a dry run is performed and changes are printed to the terminal for you to review. Use `-h` to print a help menu.
+
+You should remove the `.rename_test_dir`, which is only for testing the `rename.py` script.
+
 ### Badges README
 
 The `README.md` is obviously specific to your project, but you might want to use the badges at the top.
