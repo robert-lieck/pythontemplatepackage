@@ -47,7 +47,8 @@ class TestRename(TestCase):
                                                         'LICENSE',
                                                         'tests',
                                                         'requirements.txt',
-                                                        'examples']]
+                                                        'examples',
+                                                        'notebooks']]
                 if Path(dir) == Path(self.base) / 'doc':
                     return [s for s in sub if s not in ['api_summary.rst',
                                                         'conf.py',

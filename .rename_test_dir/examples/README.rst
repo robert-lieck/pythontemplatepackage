@@ -1,3 +1,3 @@
-NewPackage Gallery
-=============================
+NewPackage Examples Gallery
+======================================
 
