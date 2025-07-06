@@ -74,3 +74,6 @@ html_static_path = ['_static']
 
 # In the main body of an autoclass directive, insert both the class’ and the __init__ method’s docstring
 autoclass_content = 'both'
+
+# path for static html files
+html_extra_path = ['extra']

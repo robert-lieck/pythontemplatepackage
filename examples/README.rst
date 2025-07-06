@@ -1,3 +1,3 @@
-PythonTemplatePackage Gallery
-=============================
+PythonTemplatePackage Examples Gallery
+======================================
 

@@ -8,6 +8,7 @@ Welcome to PythonTemplatePackage's documentation!
    :caption: Contents:
 
    auto_examples/index.rst
+   notebook_gallery
    api_summary
 
 .. ...add more elements to table of contents
