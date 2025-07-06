@@ -63,6 +63,8 @@ imgmath_image_format='svg'
 intersphinx_mapping = {}
 # report broken links
 nitpicky = True
+# don't check some links
+linkcheck_ignore = ['notebooks/.*']
 
 # include all Python files in example gallery (not just files starting with "plot_" as the default)
 sphinx_gallery_conf = {"filename_pattern": ''}
