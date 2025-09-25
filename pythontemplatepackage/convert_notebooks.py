@@ -86,27 +86,37 @@ def main():
     # read gallery header
     with open(doc_nb_rst_dir/"README.rst", 'r') as file:
         nb_gallery = file.read()
+    toc_tree = []
 
     # iterate through notebooks
     print("Start notebook conversion:")
-    for nb in nb_dir.glob("*.ipynb"):
+    for nb in sorted(nb_dir.glob("*.ipynb")):
+        stem = nb.stem
         # copy to doc
-        shutil.copyfile(nb, doc_nb_ipynb_dir / f"{nb.stem}.ipynb")
+        shutil.copyfile(nb, doc_nb_ipynb_dir / f"{stem}.ipynb")
         # get title and convert to .py and .html
         title = convert(
             nb_path=nb,
-            py_out=test_nb_dir / f"{nb.stem}.py",
-            html_out=doc_nb_html_dir / f"{nb.stem}.html",
+            py_out=test_nb_dir / f"{stem}.py",
+            html_out=doc_nb_html_dir / f"{stem}.html",
         )
         # create RST file
-        create_rst(rst_out=doc_nb_rst_dir / f"{nb.stem}.rst",
+        create_rst(rst_out=doc_nb_rst_dir / f"{stem}.rst",
                    title=title,
-                   stem=nb.stem,
+                   stem=stem,
                    html_dir=doc_nb_html_sub_dir,
                    ipynb_dir=doc_nb_ipynb_sub_dir)
         # add to gallery
-        nb_gallery += f"\n * `{title} <{doc_nb_rst_sub_dir}/{nb.stem}.html>`_"
+        nb_gallery += f"\n * `{title} <{doc_nb_rst_sub_dir}/{stem}.html>`_"
+        toc_tree.append(f"/{doc_nb_rst_sub_dir}/{stem}")
         print(f"  ✓ {nb.name}")
+    print("DONE")
+
+    # add toc tree
+    print("Adding TOC tree")
+    nb_gallery += "\n\n.. toctree::\n   :hidden:\n"
+    for t in toc_tree:
+        nb_gallery += "\n   " + t
     print("DONE")
 
     # write gallery file
