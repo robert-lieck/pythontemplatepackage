@@ -2,4 +2,4 @@ PythonTemplatePackage Notebook Gallery
 ======================================
 
 Here is a list of notebooks:
- * `An example notebook... <notebooks/Example_Notebook.html>`_
+ * `An example notebook... <notebooks_rst/Example_Notebook.html>`_

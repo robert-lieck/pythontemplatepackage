@@ -135,3 +135,9 @@ To publish the documentation via GitHub pages, you have to:
 - enable GitHub pages on `gh-pages` branch using the `/` (root) directory.
 
 The `doc` action builds the documentation via `make html` and pushes it to the `gh-pages` branch. It also runs `make linkcheck` and `make doctest` to check for missing links and test examples in the documentation.
+
+#### Examples & Notebook Gallery
+
+The `sphinx_gallery` extension generates a gallery of examples from `.py` files in the `examples` folder and adds them to the documentation. This happens **automatically** when building the documentation.
+
+A similar results can be achieved by running the `convert_notebooks.py` script, which takes `.ipynb` files in the `notebooks` folder, converts them to HTML and adds them to the documentation. This has to be run **manually** before building the documentation.

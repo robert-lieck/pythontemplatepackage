@@ -49,7 +49,7 @@ def main(args):
         ('PythonTemplatePackage', args.package_name, 'Package name in text', ['./doc/index.rst',
                                                                               './README.md',
                                                                               './examples/README.rst',
-                                                                              './notebooks/README.rst']),
+                                                                              './doc/notebooks_rst/README.rst']),
         ('pythontemplatepackage', args.python_name, 'Python package name', ['./doc/conf.py',
                                                                             './doc/index.rst',
                                                                             './doc/api_summary.rst',

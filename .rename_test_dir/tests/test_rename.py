@@ -55,7 +55,8 @@ class TestRename(TestCase):
                                                         'index.rst',
                                                         'requirements.txt',
                                                         '_static',
-                                                        '_templates']]
+                                                        '_templates',
+                                                        'notebooks_rst']]
                 return []
 
         with tempfile.TemporaryDirectory() as tmp_dir:

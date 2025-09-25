@@ -64,7 +64,7 @@ intersphinx_mapping = {}
 # report broken links
 nitpicky = True
 # don't check some links
-linkcheck_ignore = ['notebooks/.*']
+linkcheck_ignore = ['notebooks_rst/.*', '../notebooks_html/.*', '../notebooks_ipynb/.*']
 
 # include all Python files in example gallery (not just files starting with "plot_" as the default)
 sphinx_gallery_conf = {"filename_pattern": ''}
