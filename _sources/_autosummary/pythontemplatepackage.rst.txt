@@ -28,6 +28,7 @@
    :template: custom-module-template.rst
    :recursive:
 
+   convert_notebooks
    myclass
    rename
 
